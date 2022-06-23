@@ -3,7 +3,7 @@ import { Field } from 'components/Game/Field'
 import { Form } from 'components/Game/Form'
 import { Robot } from 'components/Game/Robot'
 import { nanoid } from 'nanoid'
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 const randomColor = () =>
 	`#${Math.floor(Math.random() * 16777215)
@@ -39,7 +39,10 @@ export const Game = () => {
 	const [robots, setRobots] = useState<Robots>([])
 	const [robotCommands, setRobotCommands] = useState<RobotCommand[]>([])
 
-	console.log(robotCommands)
+	//console.log('prev: ', prevAngleRef)
+	//console.log('current: ', prevAngleRef.current)
+
+	//console.log(robotCommands)
 	return (
 		<>
 			<Form

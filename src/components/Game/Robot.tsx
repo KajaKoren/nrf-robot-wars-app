@@ -1,6 +1,7 @@
 import Color from 'color'
 import styles from 'components/Game/Robot.module.css'
 import { nanoid } from 'nanoid'
+import { useRef } from 'react'
 
 export const Robot = ({
 	id,
@@ -31,9 +32,17 @@ export const Robot = ({
 	points.push([xMm - widthMm / 2, yMm - heightMm / 2])
 
 	const gradientId = nanoid()
+	const prevAngleRef = useRef<number>()
 
 	return (
 		<g>
+			<line
+				style={{ stroke: 'black', strokeOpacity: 0.7, strokeDasharray: 5 }}
+				x1={xMm}
+				y1={yMm}
+				x2={xMm + 100 * Math.cos(rotationDeg * (Math.PI / 180))}
+				y2={yMm + 100 * Math.sin(rotationDeg * (Math.PI / 180))}
+			></line>
 			<defs>
 				<linearGradient id={gradientId} gradientTransform="rotate(90)">
 					<stop
