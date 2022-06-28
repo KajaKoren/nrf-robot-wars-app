@@ -68,7 +68,7 @@ export const GameAdminProvider: FunctionComponent<{
 		robotFieldPosition: {},
 	})
 	const { thingName: gameAdminThing } = useGameControllerThing()
-	const [autoUpdate, setAutoUpdate] = useState<boolean>(true)
+	const [autoUpdate, setAutoUpdate] = useState<boolean>(false)
 	const { accessKeyId, secretAccessKey, region } = useCredentials()
 
 	let iotDataPlaneClient: IoTDataPlaneClient | undefined = undefined

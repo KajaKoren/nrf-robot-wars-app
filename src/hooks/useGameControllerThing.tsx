@@ -50,7 +50,7 @@ export const GameControllerThingProvider: FunctionComponent<{
 		iotClient
 			.send(
 				new ListThingsInThingGroupCommand({
-					thingGroupName: 'gameControllerThing',
+					thingGroupName: 'gameController',
 				}),
 			)
 			.then(({ things }) => {

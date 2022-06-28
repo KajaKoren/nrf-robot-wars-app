@@ -8,13 +8,14 @@ import { createRoot } from 'react-dom/client'
 const container = document.getElementById('root') as HTMLElement
 const root = createRoot(container)
 root.render(
-	<GameControllerThingProvider>
-		<CredentialsProvider>
+	<CredentialsProvider>
+		<GameControllerThingProvider>
 			<GameAdminProvider>
 				<GameControllerProvider>
 					<App />
 				</GameControllerProvider>
 			</GameAdminProvider>
-		</CredentialsProvider>
-	</GameControllerThingProvider>,
+		</GameControllerThingProvider>
+	</CredentialsProvider>
+	
 )
